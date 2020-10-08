@@ -3,7 +3,7 @@ const connectionString = 'mongodb://localhost:27017/mongoose-vampires-hw';
 const db = mongoose.connection;
 
 mongoose.connect(connectionString, {
-    userNewUrlParser: true,
+    useNewUrlParser: true,
     useFindAndModify: false,
     useCreateIndex: true,
     useUnifiedTopology: true,
