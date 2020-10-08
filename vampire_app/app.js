@@ -107,6 +107,62 @@ const db = require('./models');
 /////////////////////////////////////////////////
 // ### Select by comparison
 
+// 1. Find all the vampires that that are females
+
+// db.Vampire.find({gender: 'f'}, (error, foundVamps) => {
+//     if (error) {
+//         console.log(error);
+//     } else {
+//         console.log(foundVamps);
+//     }
+//     process.exit();
+// });
+
+// 2. have greater than 500 victims
+
+// db.Vampire.find({victims: {$gt: 500}}, (error, foundVamps) => {
+//     if (error) {
+//         console.log(error);
+//     } else {
+//         console.log(foundVamps);
+//     }
+//     process.exit();
+// });
+
+// 3. have fewer than or equal to 150 victims
+
+// db.Vampire.find({victims: {$lte: 150}}, (error, foundVamps) => {
+//     if (error) {
+//         console.log(error);
+//     } else {
+//         console.log(foundVamps);
+//     }
+//     process.exit();
+// });
+
+// 4. have a victim count is not equal to 210234
+
+// db.Vampire.find({victims: {$ne: 210234}}, (error, foundVamps) => {
+//     if (error) {
+//         console.log(error);
+//     } else {
+//         console.log(foundVamps);
+//     }
+//     process.exit();
+// });
+
+// 5. have greater than 150 AND fewer than 500 victims
+
+// db.Vampire.find({victims: {$gt: 150, $lt: 500}}, (error, foundVamps) => {
+//     if (error) {
+//         console.log(error);
+//     } else {
+//         console.log(foundVamps);
+//     }
+//     process.exit();
+// });
+
+
 /////////////////////////////////////////////////
 // ### Select by exists or does not exist
 
