@@ -409,6 +409,28 @@ const { exists } = require('./models/vampire');
 /////////////////////////////////////////////////
 // ## REMOVE
 
+// 1. Remove a single document wherein the hair_color is 'brown'
+
+// db.Vampire.findOneAndDelete(
+//     {
+//         hair_color: 'brown'
+//     }, 
+//     {},
+//     (err, updatedVamp) => {
+//     if (err) return err;
+//     console.log(updatedVamp);
+//     process.exit();
+// });
+
+// 2. We found out that the vampires with the blue eyes were just fakes! Let's remove all the vampires who have blue eyes from our database.
+
+// db.Vampire.remove({eye_color: 'blue'},
+//     (err, updatedVamp) => {
+//     if (err) return err;
+//     console.log(updatedVamp);
+//     process.exit();
+// });
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 
