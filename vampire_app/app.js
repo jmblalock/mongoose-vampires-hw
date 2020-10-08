@@ -372,6 +372,39 @@ const { exists } = require('./models/vampire');
 /////////////////////////////////////////////////
 // ## UPDATE
 
+// 2. Update 'Eve' to have a gender of 'm'
+
+// db.Vampire.findOneAndUpdate({name: 'Eve'}, 
+//     {gender: 'm'},
+//     {new: true},
+//     (err, updatedVamp) => {
+//     if (err) return err;
+//     console.log(updatedVamp);
+//     process.exit();
+// });
+
+// 3. Rename 'Eve's' name field to 'moniker'
+
+// db.Vampire.findOneAndUpdate({name: 'Eve'}, 
+//     {name: 'moniker'},
+//     {new: true},
+//     (err, updatedVamp) => {
+//     if (err) return err;
+//     console.log(updatedVamp);
+//     process.exit();
+// });
+
+// 4. We now no longer want to categorize female gender as "f", but rather as fems. Update all females so that the they are of gender "fems".
+
+// db.Vampire.updateMany({gender: 'f'}, 
+//     {gender: 'fems'},
+//     {new: true},
+//     (err, updatedVamp) => {
+//     if (err) return err;
+//     console.log(updatedVamp);
+//     process.exit();
+// });
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // ## REMOVE
