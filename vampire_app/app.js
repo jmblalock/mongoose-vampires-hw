@@ -355,6 +355,19 @@ const { exists } = require('./models/vampire');
 /////////////////////////////////////////////////
 // ## REPLACE
 
+// 1. Replace the vampire called 'Claudia' with a vampire called 'Eve'.
+
+// db.Vampire.findOneAndReplace({name: 'Claudia'},
+//     {name:'Eve', dob: new Date(3, 12, 7, 8, 3), hair_color: 'brunette', eye_color: 'green', loves: ['ribbons'], location: 'Houston, Texas, US',gender: 'f', victims: 1},
+//     {new: true},
+//     (error, foundVamps) => { 
+//     if (error) return error;
+        
+//     console.log(foundVamps);
+        
+//     process.exit();
+// });
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // ## UPDATE
