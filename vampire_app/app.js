@@ -6,6 +6,7 @@ const Vampire = require('./models/vampire');
 const vampireData = require('./populateVampires');
 // 4. Connect your database
 const db = require('./models');
+const { exists } = require('./models/vampire');
 /////////////////////////////////////////////////
 //Write your answers to add, query, update, remove, and Hungry for More below.
 
@@ -165,6 +166,49 @@ const db = require('./models');
 
 /////////////////////////////////////////////////
 // ### Select by exists or does not exist
+
+// 1. have a title property
+
+// db.Vampire.find({title: {$exists: true}}, (error, foundVamps) => {
+//     if (error) {
+//         console.log(error);
+//     } else {
+//         console.log(foundVamps);
+//     }
+//     process.exit();
+// });
+
+// 2. do not have a victims property
+
+// db.Vampire.find({victims: {$exists: false}}, (error, foundVamps) => {
+//     if (error) {
+//         console.log(error);
+//     } else {
+//         console.log(foundVamps);
+//     }
+//     process.exit();
+// });
+
+// 3. have a title AND no victims
+
+// db.Vampire.find( { $and: [ { title: { $exists: true } }, { victims: { $exists: false } } ] }, (error, foundVamps) => {
+//     if (error) return error;
+
+//     console.log(foundVamps);
+
+//     process.exit();
+// });
+
+// 4. have victims AND the victims they have are greater than 1000
+
+// db.Vampire.find({$and: [{victims:{$exists: true}}, {victims: {$gt: 1000}}]}, 
+//     (error, foundVamps) => { 
+//     if (error) return error;
+    
+//     console.log(foundVamps);
+
+//     process.exit();
+// });
 
 /////////////////////////////////////////////////
 // ### Select with OR
