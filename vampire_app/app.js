@@ -307,6 +307,50 @@ const { exists } = require('./models/vampire');
 /////////////////////////////////////////////////
 //### Negative Selection
 
+// 1. love ribbons but do not have brown eyes
+
+// db.Vampire.find({$and: [{loves: 'ribbons'}, {eye_color: {$nin: ['brown']}}]}, 
+//     (error, foundVamps) => { 
+//     if (error) return error;
+    
+//     console.log(foundVamps);
+
+//     process.exit();
+// });
+
+// 2. are not from Rome
+
+// db.Vampire.find({location: {$nin: 'Rome'}}, 
+//     (error, foundVamps) => { 
+//     if (error) return error;
+    
+//     console.log(foundVamps);
+
+//     process.exit();
+// });
+
+// 3. do not love any of the following: [fancy cloaks, frilly shirtsleeves, appearing innocent, being tragic, brooding]
+
+// db.Vampire.find({loves: {$nin: ['fancy cloaks', 'frilly shirtsleeves', 'appearing innocent', 'being tragic', 'brooding']}}, 
+//     (error, foundVamps) => { 
+//     if (error) return error;
+    
+//     console.log(foundVamps);
+
+//     process.exit();
+// });
+
+// 4. have not killed more than 200 people
+
+// db.Vampire.find({victims: {$lt: 200}}, 
+//     (error, foundVamps) => { 
+//     if (error) return error;
+    
+//     console.log(foundVamps);
+
+//     process.exit();
+// });
+
 /////////////////////////////////////////////////
 /////////////////////////////////////////////////
 // ## REPLACE
